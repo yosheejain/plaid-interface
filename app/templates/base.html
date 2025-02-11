@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+<body>
+        {% if current_user.is_authenticated %}
+        <div class="tabs navbar">
+        <button class="tablink" id="tab1-link">Programs (Organized by Use Case)</button>
+        <button class="tablink" id="tab2-link">Programs (Full Text) </button>
+        <button class="tablink active" id="tab3-link">Plan Creation</button>
+        </div>
+
+        {% endif %}
+
+        <div id="tutorialModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="slideshow-container">
+
+                    <div class="slide fade">
+                        <div class="numbertext">1 / 5</div>
+                        <video width=100% autoplay=true controls muted>
+                            <source src="{{ url_for('static', filename='tutorial/slide4.webm') }}" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="text-caption">When working with a suggested plan, you can search it in the program database and ask for explanations.</div>
+                    </div>
+
+                    <div class="slide fade">
+                        <div class="numbertext">2 / 5</div>
+
+                        <video width=100% autoplay=true controls muted>
+                            <source src="{{ url_for('static', filename='tutorial/slide1.webm') }}" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="text-caption">You can also create a new plan and fill in the fields yourself. You can write out the changeable areas or select pieces of code to add mark as changeable parts.</div>
+                    </div>
+
+                    <div class="slide fade">
+                        <div class="numbertext">3 / 5</div>
+
+                        <video width=100% autoplay=true controls muted>
+                            <source src="{{ url_for('static', filename='tutorial/slide5.webm') }}" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="text-caption">You can search given programs for inspirations. You can create a plan from the complete example or select a part of the code to create a plan. </div>
+                    </div>
+
+                    <div class="slide fade">
+                        <div class="numbertext">4 / 5</div>
+                        <video width=100% autoplay=true controls muted>
+                            <source src="{{ url_for('static', filename='tutorial/slide2.webm') }}" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="text-caption">Hold Shift and select multiple plans to group them together and give a name to your group of plans.</div>
+                    </div>
+
+                    <div class="slide fade">
+                        <div class="numbertext">5 / 5</div>
+                        <video width=100% autoplay=true controls muted>
+                            <source src="{{ url_for('static', filename='tutorial/slide3.webm') }}" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="text-caption">When selecting multiple items, you can mark or delete them at once. When creating a new plan, you can ask for a suggestion.</div>
+                    </div>
+
+                    <a class="prev" style="background-color: black;" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" style="background-color: black;" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            {% block content %}{% endblock %}
+        </div>
+</body>
+</html>

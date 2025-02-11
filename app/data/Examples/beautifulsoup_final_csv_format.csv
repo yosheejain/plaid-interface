@@ -1,0 +1,14 @@
+ID,use_case,name,goal,solution,changeable_areas
+1,Keep track of item count, Count Items,Count items based on criteria,Use a loop to count,Loop through items
+1,Keep track of things count, Count Things,Count things accurately,Use accurate counting method,Iterate over items
+2,Keep sum of items, Calculate Total,Sum up all elements,Use addition to sum,Add all elements
+2,Find sum of items, Sum Elements,Sum up elements precisely,Use precise addition,Accurately sum items
+3,Find max of items, Find Maximum,Track highest value,Use max function,Find the max value
+3,Find highest of items, Identify Highest,Identify the highest element,Use comparison,Compare elements
+3,Second set, Identify Highest,Identify the highest element,Use comparison,Compare elements
+1,Keep track of item count, Count Items,Count items based on criteria,Use a loop to count,Loop through items
+1,Keep track of things count, Count Things,Count things accurately,Use accurate counting method,Iterate over items
+2,Keep sum of items, Calculate Total,Sum up all elements,Use addition to sum,Add all elements
+2,Find sum of items, Sum Elements,Sum up elements precisely,Use precise addition,Accurately sum items
+3,Find max of items, Find Maximum,Track highest value,Use max function,Find the max value
+3,Find highest of items, Identify Highest,Identify the highest element,Use comparison,Compare elements

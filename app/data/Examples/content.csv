@@ -1,0 +1,4 @@
+ID,name,goal,solution,changeable_areas,position_x,position_y
+1,Count Items,Find the number of items,Implement a counter,Counter; Criteria,0,0
+2,Calculate Sum,Find the sum of items,Sum all elements,Sum; Elements,100,100
+3,Identify Maximum,Find the maximum item,Track the maximum value,Max; Elements,200,200

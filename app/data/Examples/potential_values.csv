@@ -1,0 +1,7 @@
+ID,name,goal,solution,changeable_areas
+1,Count Items,Count items based on criteria,Use a loop to count,Loop through items
+1,Count Things,Count things accurately,Use accurate counting method,Iterate over items
+2,Calculate Total,Sum up all elements,Use addition to sum,Add all elements
+2,Sum Elements,Sum up elements precisely,Use precise addition,Accurately sum items
+3,Find Maximum,Track highest value,Use max function,Find the max value
+3,Identify Highest,Identify the highest element,Use comparison,Compare elements
