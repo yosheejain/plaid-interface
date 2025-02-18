@@ -4,7 +4,7 @@ To deploy locally, replace the `api key`, `api version`, and `azure endpoint` in
 
 Then, run the app with the command ```python app.py```.
 
-View the paper at: (Pre-print link to be updated)
+View the paper on [arXiv](https://arxiv.org/abs/2502.10618).
 
 If using PLAID for research, please cite:
 
